@@ -1,0 +1,20 @@
+[
+    {
+        "question": "What is a Directive?",
+        "answer": "Directives are classes that add additional behavior to elements in your Angular application.",
+        "non-answers": [
+            "Directives are components in an Angular application that make up the UI.",
+            "I don't know.",
+            "There are two types of directives: Attribute Directives and Structural Directives."
+        ]
+    },
+    {
+        "question": "What does the static method RouterModule.forRoot() do?",
+        "answer": "Creates an NgModule that contains all the directives, the given routes, and the Router service itself.",
+        "non-answers": [
+            "Creates an NgModule that contains all the directives, the given routes, but NOT the Router service itself.",
+            "I don't know.",
+            "I only know React."
+        ]
+    }
+]

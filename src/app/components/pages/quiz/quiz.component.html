@@ -1,0 +1,11 @@
+<h3>Quiz</h3>
+<div class="error">All questions must be answered!</div>
+<form>
+    <div class="pt-3" *ngFor="let question of listOfQuestions$ | async; let i = index">
+        <app-question id={{i}} question={{question.question}} answersString={{question.answers}} (selectAnswerEvent)="selectAnswer(i, $event)"></app-question>
+    </div>
+    <div *ngIf="!listOfQuestions$">
+        <span class="spinner-border spinner-border-lg align-center"></span>
+    </div>
+    <button type="button" class="submit btn btn-success" (click)="onSubmit()">Submit</button>
+</form>

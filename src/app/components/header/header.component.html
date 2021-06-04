@@ -1,0 +1,28 @@
+<nav id="header" class="navbar navbar-expand-lg navbar-light bg-light border border-right-0 border-left-0 border-top-0">
+    <a id="title" class="navbar-brand" [routerLink]="nav.home">Angular Quiz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item" [ngClass]="{'active': nav.home === activePath}">
+                <a class="nav-link" [routerLink]="nav.home">Home</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'active': nav.beginner === activePath}">
+                <a class="nav-link" [routerLink]="nav.beginner">Beginner</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'active': nav.intermediate === activePath}">
+                <a class="nav-link" [routerLink]="nav.intermediate">Intermediate</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'active': nav.expert === activePath}">
+                <a class="nav-link" [routerLink]="nav.expert">Expert</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'active': nav.pricing === activePath}">
+                <a class="nav-link" [routerLink]="nav.pricing">Pricing</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'active': nav.login === activePath || nav.register === activePath}">
+                <a class="nav-link" [routerLink]="nav.login">Login/Register</a>
+            </li>
+        </ul>
+    </div>
+</nav>

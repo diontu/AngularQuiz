@@ -1,12 +1,19 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        RouterOutlet
       ],
+      imports: [ RouterModule.forRoot([]) ]
     }).compileComponents();
   });
 
@@ -22,10 +29,19 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular-quiz');
   });
 
-  it('should render title', () => {
+  it('should render Title from Header Component', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-quiz app is running!');
+    //check the rendering of title from header component
+    expect(compiled.querySelector('#header')).toBeDefined();
+  });
+
+  it('should render Title from Header Component', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    //check the rendering of title from header component
+    expect(compiled.querySelector('#footer')).toBeDefined();
   });
 });

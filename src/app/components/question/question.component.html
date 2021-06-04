@@ -1,0 +1,5 @@
+<div><b>{{ question }}</b></div>
+<div *ngFor="let answer of possibleAnswers; let i = index">
+    <input type="radio" [id]="id + i" [name]="id" [value]="answer" (change)="selectAnswer($event)">
+    <label [for]="id + i"><span>{{ answer }}</span></label>
+</div>

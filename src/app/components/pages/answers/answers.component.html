@@ -1,0 +1,10 @@
+<h3>Answers</h3>
+<p>answers works!</p>
+<div *ngFor="let answer of listOfAnswers | async">
+    <h4>{{answer.question}}</h4>
+    <p>{{answer.answer}}</p>
+    <p><b>Explanation: </b>{{answer.explanation}}</p>    
+</div>
+<div *ngIf="!listOfAnswers">
+    <span class="spinner-border spinner-border-lg align-center"></span>
+</div>

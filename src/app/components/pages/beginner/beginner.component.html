@@ -1,0 +1,19 @@
+<h3>Beginner Angular Quiz</h3>
+<div class="pt-3">
+    <p>The Beginner quizzes covers the introductory concepts covered in <a href="https://angular.io/guide/what-is-angular">What is Angular?</a>.</p>
+    <p>The following topics and quizzes covered here will include:</p>
+    <ul>
+        <li>What is Angular?</li>
+    </ul>
+    <p><i>Recommendation: Read the documents related each topic and then try out the quiz!</i></p>
+    <div class="pt-4">
+        <h4>What is Angular?</h4>
+        <p class="pt-2">This quiz tests your understanding of Angular 2+ as per the following documentations: </p>
+        <ul>
+            <li><a href="https://angular.io/guide/what-is-angular#angular-applications-the-essentials">Angular applications: The essentials</a></li>
+            <li><a href="https://angular.io/guide/what-is-angular#angular-cli">Angular CLI</a></li>
+            <li><a href="https://angular.io/guide/what-is-angular#first-party-libraries">First-party libraries</a></li>
+        </ul>
+        <button class="btn btn-primary" routerLink="quiz" [queryParams]="{ topic: 'WhatIsAngular', difficulty: difficulty }">Take What is Angular? Quiz</button>
+    </div>
+</div>
